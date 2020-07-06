@@ -28,6 +28,9 @@ export const StoryTitle = styled.h1`
 
 export const StoryMeta = styled.div`
     font-style: italic;
+    span:first-child{
+        margin-right: 10px;
+    }
     span:not(:first-child):before{
         content: '.';
         margin: 0 7px;
@@ -35,4 +38,9 @@ export const StoryMeta = styled.div`
     .story_meta-bold:{
         font-weight: bold;
     }
+`;
+
+export const StoryMetaElement = styled.span`
+    font-weight: bold;
+    color: ${props => props.color || 'red'};
 `;
