@@ -3,13 +3,13 @@ export const debounce = (func, wait, immediate, args) =>{
   return () =>{
     const context = this;
     const callNow = immediate && !timeout;
-    let later = ()=>{
+    const later = ()=>{
       timeout = null;
       if(!immediate){
         func.apply(context, args);
       }
       clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+        timeout = setTimeout(later(), wait);
         if(callNow) func.apply(context, args)
     }
   }

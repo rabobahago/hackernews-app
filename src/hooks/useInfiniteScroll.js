@@ -10,7 +10,7 @@ export const useInfiniteScroll = ()=>{
       return false;
     }
     setLoading(true)
-  }, 100)
+  }, 500)
   useEffect(()=>{
     if(!loading) return;
     if(count + STORIES_INCREMENT >= MAX_STORIES){
